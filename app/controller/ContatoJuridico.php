@@ -18,7 +18,8 @@ class ContatoJuridico extends Contato {
     
     private $_cnpj_contato;
     
-    public function __construct($nome = null, $telefone = null, $endereco = null) {
+    public function __construct($cnpj = null, $nome = null, $telefone = null, $endereco = null) {
+        $this->_cnpj_contato = $cnpj;
         parent::__construct($nome, $telefone, $endereco, $foto);
     }
     
@@ -27,6 +28,14 @@ class ContatoJuridico extends Contato {
     }
     
     public function getCnpjContato() {
+        
+    }
+    
+    public function cadastrar() {
+        
+    }
+    
+    public function listar() {
         
     }
     

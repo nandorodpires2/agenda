@@ -18,7 +18,8 @@ class ContatoFisico extends Contato {
     
     private $_cpf_contato;
     
-    public function __construct($nome = null, $telefone = null, $endereco = null) {
+    public function __construct($cpf = null, $nome = null, $telefone = null, $endereco = null) {
+        $this->_cpf_contato = $cpf;
         parent::__construct($nome, $telefone, $endereco, $foto);
     }
     
@@ -29,5 +30,14 @@ class ContatoFisico extends Contato {
     public function getCpfContato() {
         
     }
+    
+    public function cadastrar() {
+        
+    }
+    
+    public function listar() {
+        
+    }
+    
     
 }
