@@ -5,22 +5,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include_once '/../model/Contato.php';;
+
 /**
- * Description of Index
+ * Description of Contato
  *
  * @author Fernando Rodrigues
  */
-class Index extends Controller {
+class Contato extends Db {
     
-    public function __construct() {        
+    protected $_table = "contato";
+    
+    public function __construct() {
         parent::__construct();
     }
-
-    public function index() {        
+    
+    public function getContatos() {
         
-        $modelContato = new Contato();
-        $modelContato->getContatos();
+        $select = $this->select();
+        $select .= $this->where("contato_ativo = 1");
+        
+        var_dump($this->toString());
         
     }
     

@@ -32,9 +32,7 @@ class Run {
         if (!$conn) {
             throw new Exception("Connection failed!");
         }
-        
-        $this->_app->_registry->set("conn", $conn);
-        
+        Registry::set("conn", $conn);
     }
     
     private function startLayout() {

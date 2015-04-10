@@ -6,23 +6,15 @@
  * and open the template in the editor.
  */
 
-include_once 'Request.php';
-include_once 'Registry.php';
-
-include_once 'Controller.php';
-include_once 'Db.php';
-
 /**
- * Description of App
+ * Description of Controller
  *
  * @author Fernando Rodrigues
  */
-class App {
+class Controller extends App {
     
-    public $_request;
-
     public function __construct() {
-        $this->_request = new Request();
+        parent::__construct();
     }
     
 }
